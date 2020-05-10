@@ -1,0 +1,22 @@
+{
+  "name": "ordinal-number",
+  "version": "1.0.1",
+  "description": "Number With Ordinal",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "hello"
+  ],
+  "author": "amitx",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitx-npm/number-with-ordinal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amitx-npm/number-with-ordinal/issues"
+  },
+  "homepage": "https://github.com/amitx-npm/number-with-ordinal#readme"
+}
