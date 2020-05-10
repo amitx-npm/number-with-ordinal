@@ -1,13 +1,18 @@
 {
   "name": "ordinal-number",
-  "version": "1.0.1",
-  "description": "Number With Ordinal",
+  "version": "1.0.3",
+  "description": "Contains light weight util method for converting numbers into ordinal.",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "keywords": [
-    "hello"
+    "converter",
+    "number",
+    "ordinal",
+    "string",
+    "tool",
+    "ordinal-number"
   ],
   "author": "amitx",
   "license": "ISC",
