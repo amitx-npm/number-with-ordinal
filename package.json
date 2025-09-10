@@ -1,20 +1,49 @@
 {
   "name": "ordinal-number",
-  "version": "1.0.3",
-  "description": "Contains light weight util method for converting numbers into ordinal.",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "Lightweight, dependency-free utility to convert numbers to ordinal strings.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "test"
+    "build": "tsup src/index.ts --dts --format esm,cjs --clean",
+    "clean": "rimraf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .ts,.js",
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "release:check": "npm run build && npm run test",
+    "commitmsg": "commitlint --edit $GIT_PARAMS",
+    "release": "standard-version"
   },
   "keywords": [
     "converter",
     "number",
     "ordinal",
-    "string",
-    "tool",
-    "ordinal-number"
+    "ordinal-number",
+    "ordinalize",
+    "suffix",
+    "humanize",
+    "format",
+    "i18n",
+    "internationalization",
+    "utility",
+    "lightweight",
+    "zero-dependencies"
   ],
-  "author": "amitx",
+  "author": "Amit <amitx>",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -23,5 +52,21 @@
   "bugs": {
     "url": "https://github.com/amitx-npm/number-with-ordinal/issues"
   },
-  "homepage": "https://github.com/amitx-npm/number-with-ordinal#readme"
+  "homepage": "https://github.com/amitx-npm/number-with-ordinal#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitest/coverage-v8": "^2.0.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
+    "standard-version": "^9.5.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
+  }
 }
