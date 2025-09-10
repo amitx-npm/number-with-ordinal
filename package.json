@@ -1,5 +1,5 @@
 {
-  "name": "ordinal-number",
+  "name": "ordinalize",
   "version": "1.1.0",
   "description": "Lightweight, dependency-free utility to convert numbers to ordinal strings.",
   "main": "dist/index.cjs",
@@ -53,12 +53,15 @@
     "url": "https://github.com/amitx-npm/number-with-ordinal/issues"
   },
   "homepage": "https://github.com/amitx-npm/number-with-ordinal#readme",
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "@vitest/coverage-v8": "^2.0.5",
+    "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.6",
@@ -67,6 +70,6 @@
     "standard-version": "^9.5.0",
     "tsup": "^8.2.4",
     "typescript": "^5.6.2",
-    "vitest": "^2.0.5"
+    "vitest": "^3.2.4"
   }
 }
